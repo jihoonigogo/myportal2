@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--  1. namespace를 이용하여 내부의 SQL쿼리 객체를 실행할 수 있따. -->
+<mapper namespace="guestbook">
+	<!--  전체 방명록 내용 불러오기 쿼리 -->
+	<!--  Selectall로 호출후 결과값타입은 geustbookvo로 받음 -->
+	<select id="selectAll"
+			resultType="guestbookVo" >
+			<![CDATA[
+	SELECT no,name,password,content,regDate as regDate
+	FROM guestbook
+	ORDER BY regdate DESC
+			
+			
+			]]>
+			
+			
+			</select>
+			
+			<!--  방명록추가 -->
+			<insert id="insert"
+			parameterType="guestbookVo">
+			<![CDATA[
+			INSERT INTO guestbook (no,name,password,content)
+			VALUES(seq_guestbook_no.nextval,
+					#{name}, #{password},#{content})
+					]]>
+			</insert>
+			
+			<delete id="delete"
+				parameterType="guestbookVo">
+				<![CDATA[
+				DELETE FROM guestbook 
+				WHERE no = #{no} AND password = #{password}
+				]]>
+				</delete>
+</mapper>

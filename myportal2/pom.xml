@@ -30,7 +30,7 @@
     <artifactId>spring-webmvc</artifactId>
     <version>${org.springframework-version}</version>
   </dependency>
-  
+ 
   <!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
   <!--  스프링 웹 -->
 	<dependency>
@@ -45,6 +45,64 @@
     <groupId>org.springframework</groupId>
     <artifactId>spring-context</artifactId>
     <version>${org.springframework-version}</version>
+    
+     </dependency>
+     
+     <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-jdbc</artifactId>
+    <version>4.3.30.RELEASE</version>
 </dependency>
-</dependencies>
+     
+     <!-- https://mvnrepository.com/artifact/com.oracle/ojdbc -->
+<dependency>
+    <groupId>com.oracle.ojdbc</groupId>
+    <artifactId>ojdbc8</artifactId>
+    <version>19.3.0.0</version>
+</dependency>
+     
+     
+  <!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+<dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>jstl</artifactId>
+    <version>1.2</version>
+</dependency>
+
+  
+   <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+		<!-- Spring JDBC -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-jdbc</artifactId>
+		    <version>4.3.30.RELEASE</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/com.oracle.ojdbc/ojdbc8 -->
+		<dependency>
+		    <groupId>com.oracle.ojdbc</groupId>
+		    <artifactId>ojdbc8</artifactId>
+		    <version>19.3.0.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+		<!-- MyBatis -->
+		<dependency>
+		    <groupId>org.mybatis</groupId>
+		    <artifactId>mybatis</artifactId>
+		    <version>3.5.6</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
+		<!-- MyBatis Spring -->
+		<dependency>
+		    <groupId>org.mybatis</groupId>
+		    <artifactId>mybatis-spring</artifactId>
+		    <version>2.0.6</version>
+		</dependency>
+				
+
+	</dependencies>
+
 </project>
