@@ -29,6 +29,7 @@ public class MainController {
 			return mav;
 		}
 		
+		//예외처리 테스트
 		@ResponseBody
 		@RequestMapping("/except")
 		public String except(HttpServletRequest req) {

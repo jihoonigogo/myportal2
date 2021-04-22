@@ -2,6 +2,8 @@ package com.bitacademy.myportal2.controller;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,7 +19,11 @@ import com.bitacademy.myportal2.vo.GuestbookVo;
 @RequestMapping("/guestbook")
 public class GuestbookController {
 
-	// controller에 service 연결
+	
+	// Logger
+	private Logger logger = LoggerFactory.getLogger(GuestbookController.class);
+	
+	// 게스트북controller에 게스트북service 연결
 	@Autowired
 	GuestbookService guestbookServiceImpl;
 	
@@ -26,10 +32,12 @@ public class GuestbookController {
 	@RequestMapping({"","/","/list"})
 	public String list(Model model) {
 		List<GuestbookVo> list = guestbookServiceImpl.getList();
+		//데이터를 모델에 추가.
 		model.addAttribute("list", list);
 		return "guestbook/list";
 	}
 	
+	//게시물 작성 처리
 	@RequestMapping(value ="/write", method=RequestMethod.POST)
 	public String write(@ModelAttribute GuestbookVo vo) {
 		System.out.println("VO:" +vo);
@@ -40,8 +48,7 @@ public class GuestbookController {
 		return "redirect:/guestbook";
 	}
 	
-	//게시물 삭제 폼 
-	
+	//게시물 삭제 폼
 	@RequestMapping(value="/delete/{no}", // path variable
 		 method = RequestMethod.GET)
 	public String deleteForm(@PathVariable Long no,Model model) {
@@ -49,6 +56,7 @@ public class GuestbookController {
 		return "guestbook/deleteform";
 	}
 	
+	//삭제처리기능.
 	@RequestMapping(value = "/delete", method = RequestMethod.POST)
 	public String delete(@ModelAttribute GuestbookVo vo) {
 		boolean success = guestbookServiceImpl.deleteMessage(vo);

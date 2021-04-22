@@ -42,7 +42,7 @@
 							<td>[${ vo.no }]</td>
 							<td>${ vo.name }</td>
 							<td>${ vo.regDate }</td>
-							<1
+							
 							<td>
 								<!-- 수정 --> <a href="<c:url value="/guestbook/delete/${vo.no }"/>"> 삭제 </a>
 							</td>

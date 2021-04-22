@@ -10,10 +10,19 @@
 	<typeAliases>
 		<typeAlias alias="memberVo" type="com.bitacademy.myportal2.vo.MemberVo" />
 		<typeAlias alias="guestbookVo" type ="com.bitacademy.myportal2.vo.GuestbookVo"/>
+		<typeAlias alias="boardVo" type ="com.bitacademy.myportal2.vo.BoardVo"/>
+	
 	</typeAliases>
 	<mappers>
-		<!-- guestbook에 관련된 매퍼 설정 -->
+		
+		 	<!-- guestbook에 관련된 매퍼 설정 -->
 		<mapper resource="mybatis/mappers/guestbook.xml" />
+		
+		 	<!-- member에 관련된 매퍼 설정 -->	
+		<mapper resource="mybatis/mappers/members.xml" />
+		
+		<!-- board에 관련된 매퍼 설정 -->	
+		<mapper resource="mybatis/mappers/board.xml" />
 	</mappers>
 </configuration>
 	  

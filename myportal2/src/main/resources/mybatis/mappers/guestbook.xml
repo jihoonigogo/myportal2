@@ -4,6 +4,7 @@
 
 <!--  1. namespace를 이용하여 내부의 SQL쿼리 객체를 실행할 수 있따. -->
 <mapper namespace="guestbook">
+
 	<!--  전체 방명록 내용 불러오기 쿼리 -->
 	<!--  Selectall로 호출후 결과값타입은 geustbookvo로 받음 -->
 	<select id="selectAll"
@@ -29,6 +30,7 @@
 					]]>
 			</insert>
 			
+			<!--  방명록 삭제 -->
 			<delete id="delete"
 				parameterType="guestbookVo">
 				<![CDATA[

@@ -1,0 +1,8 @@
+NotEmpty.memberVo.name=이름은 비어있으면 안돼요.
+Length.memberVo.name= 이름은 2~8글자여야 해요.
+
+NotEmpty.memberVo.emal=이메일은 꼭 입력해야 해요.
+Email.memberVo.email=이메일 형식으로 입력해주세요.
+
+NotEmpty.memberVo.password=비밀번호를 입력하지 않았어요.
+Length.memberVo.password=비밀번호는 4차 ~20자에요.
